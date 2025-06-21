@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AddClassSet" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="795.0" style="-fx-border-color: gray; -fx-background-color: #F8F8FF; -fx-border-width: 0 0 1 0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.myprj.ChangeClassSettingCon">
+   <children>
+      <Label fx:id="ClassId" layoutX="90.0" layoutY="80.0" prefHeight="20.0" prefWidth="74.0" text="班级编号:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="zhuanyeLB" layoutX="90.0" layoutY="50.0" prefHeight="19.0" prefWidth="33.0" text="专业:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="yuanxiLB" layoutX="332.0" layoutY="50.0" prefHeight="19.0" prefWidth="33.0" text="院系:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="daoyuanLB" layoutX="332.0" layoutY="81.0" prefHeight="19.0" prefWidth="49.0" text="辅导员:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="StuListBt" layoutX="662.0" layoutY="68.0" mnemonicParsing="false" onAction="#StuListAction" style="-fx-background-color: transparent;" text="确认修改" textFill="#b081fc" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Line endX="-17.0" endY="92.0" layoutX="678.0" layoutY="68.0" startX="-17.0" startY="-69.0" stroke="#e0c5c543" />
+      <TextField fx:id="Zy_tx" layoutX="159.0" layoutY="48.0" promptText="例:软件工程1班" />
+      <TextField fx:id="Yx_tx" layoutX="398.0" layoutY="48.0" promptText="例:计算机学院" />
+      <TextField fx:id="doayuan_tx" layoutX="398.0" layoutY="79.0" promptText="例:xxx" />
+      <TextField fx:id="ClassId_tx" layoutX="159.0" layoutY="78.0" promptText="例:10010001" />
+      <Label fx:id="MessageLB" layoutX="538.0" layoutY="72.0" text="X 信息有误请重新填写" textAlignment="CENTER" textFill="RED" visible="false" wrapText="true" />
+      <Label fx:id="Grade" layoutX="90.0" layoutY="112.0" prefHeight="20.0" prefWidth="74.0" text="班级年级:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Grade_Tx" layoutX="159.0" layoutY="110.0" promptText="例:2023" />
+      <Button fx:id="DeleteClass" layoutX="726.0" layoutY="68.0" mnemonicParsing="false" onAction="#DeleteAction" style="-fx-background-color: transparent;" text="删除班级" textFill="RED" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="Name_Tx1" layoutX="398.0" layoutY="110.0" promptText="例:***" />
+      <Label layoutX="332.0" layoutY="112.0" prefHeight="19.0" prefWidth="64.0" text="班级名称:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

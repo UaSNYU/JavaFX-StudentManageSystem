@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane fx:id="anchor" prefHeight="700.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.myprj.MainPageController">
+   <children>
+      <SplitPane fx:id="splitpane" dividerPositions="0.23731939747924988" layoutX="42.0" prefHeight="700.0" prefWidth="1058.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane fx:id="RightSplitPane" minHeight="0.0" minWidth="0.0" prefHeight="697.0" prefWidth="238.0" style="-fx-background-color: #F8F8FF;" SplitPane.resizableWithParent="false">
+               <children>
+                  <AnchorPane layoutX="-2.0" layoutY="-5.0" prefHeight="260.0" prefWidth="261.0" style="-fx-border-color: BLACK;" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-5.0">
+                     <children>
+                        <Circle fx:id="HeaderClip" fill="#e1e6eb00" layoutX="129.0" layoutY="74.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="73.66666666666669" />
+                        <Label fx:id="NameLB" layoutX="57.0" layoutY="148.0" prefHeight="15.0" prefWidth="163.0" text="姓名:">
+                           <effect>
+                              <Bloom />
+                           </effect></Label>
+                        <Label fx:id="IDLB" layoutX="57.0" layoutY="173.0" prefHeight="15.0" prefWidth="137.0" text="工号:" />
+                        <Label fx:id="PermissionLB" layoutX="57.0" layoutY="199.0" prefHeight="15.0" prefWidth="163.0" text="身份:" />
+                        <Label fx:id="MajorLB" layoutX="57.0" layoutY="225.0" prefHeight="15.0" prefWidth="163.0" text="院系:" />
+                        <ImageView fx:id="HeaderImage" fitHeight="108.0" fitWidth="108.0" layoutX="79.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="ClassButton" layoutX="-1.0" layoutY="298.0" mnemonicParsing="false" onAction="#ClassBtAction" onMouseEntered="#MouseEntered3" onMouseExited="#MouseExited3" prefHeight="43.0" prefWidth="252.0" style="-fx-border-radius: 0; -fx-background-color: #F0F8FF; -fx-border-color: gray; -fx-border-width: 0 0 1 0;-fx-background-radius: 0;" text="班级管理" />
+                  <Button fx:id="BingjiaButton" layoutX="1.0" layoutY="341.0" mnemonicParsing="false" onAction="#AllStuAction" onMouseEntered="#MouseEntered4" onMouseExited="#MouseExited4" prefHeight="43.0" prefWidth="252.0" style="-fx-border-radius: 0; -fx-background-color: #F0F8FF; -fx-border-color: gray; -fx-background-radius: 0;-fx-border-width: 0 0 1 0;" text="学生管理" />
+                  <Button fx:id="StuScoreButton" layoutX="1.0" layoutY="384.0" mnemonicParsing="false" onAction="#StuSCBtAction" onMouseEntered="#MouseEntered5" onMouseExited="#MouseExited5" prefHeight="43.0" prefWidth="252.0" style="-fx-border-radius: 0; -fx-background-color: #F0F8FF; -fx-border-color: gray; -fx-background-radius: 0;-fx-border-width: 0 0 1 0;" text="成绩管理" />
+                  <Button fx:id="CourseSetButton" layoutY="427.0" mnemonicParsing="false" onAction="#CourseAction" onMouseEntered="#MouseEntered6" onMouseExited="#MouseExited6" prefHeight="43.0" prefWidth="252.0" style="-fx-border-radius: 0; -fx-background-color: #F0F8FF; -fx-border-color: gray; -fx-background-radius: 0;-fx-border-width: 0 0 1 0;" text="课程管理" />
+                  <Button fx:id="MainButton" layoutX="-1.0" layoutY="255.0" mnemonicParsing="false" onAction="#MainBtAction" onMouseEntered="#MouseEntered1" onMouseExited="#MouseExited1" prefHeight="43.0" prefWidth="252.0" style="-fx-border-radius: 0; -fx-background-color: #F0F8FF; -fx-border-color: gray; -fx-background-radius: 0;-fx-border-width: 0 0 1 0;" text="首页" />
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect></AnchorPane>
+          <AnchorPane fx:id="LeftSplitPane" minHeight="0.0" minWidth="0.0" prefHeight="697.0" prefWidth="807.0">
+               <children>
+                  <AnchorPane fx:id="InnerPaneMain" layoutX="-4.0" prefHeight="697.0" prefWidth="824.0" style="-fx-background-color: #F8F8FF;" AnchorPane.rightAnchor="-3.3333333333333712">
+                     <children>
+                        <WebView fx:id="WebVV" layoutX="1.0" prefHeight="697.0" prefWidth="824.0" />
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="InnerPaneClass" prefHeight="697.0" prefWidth="795.0" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <ScrollPane fx:id="ClassScrollPane" layoutY="30.0" prefHeight="667.0" prefWidth="817.0" style="-fx-background-color: #F8F8FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                           <content>
+                              <VBox fx:id="InClassScrollPane" prefHeight="696.0" prefWidth="795.0" style="-fx-background-color: #F8F8FF;" />
+                           </content>
+                        </ScrollPane>
+                        <AnchorPane layoutX="-6.0" prefHeight="30.0" prefWidth="824.0" style="-fx-background-color: #F8F8FF; -fx-border-color: gray;">
+                           <children>
+                              <Button fx:id="AddClassBt" layoutX="714.0" layoutY="2.0" mnemonicParsing="false" onAction="#AddClassAction" prefHeight="23.0" prefWidth="76.0" style="-fx-background-color: transparent;" text="+添加班级" textFill="#8a78ff" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="InnerPaneStu" prefHeight="697.0" prefWidth="827.0" visible="false">
+                     <children>
+                        <ScrollPane fx:id="StuScrollPane" layoutY="30.0" prefHeight="667.0" prefWidth="817.0" style="-fx-background-color: #F8F8FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                           <content>
+                              <VBox fx:id="InStuScrollPane" prefHeight="696.0" prefWidth="795.0" style="-fx-background-color: #F8F8FF;" />
+                           </content>
+                        </ScrollPane>
+                        <AnchorPane layoutX="-6.0" prefHeight="30.0" prefWidth="824.0" style="-fx-border-color: gray; -fx-background-color: #F8F8FF;">
+                           <children>
+                              <Button fx:id="AddStuBt" layoutX="714.0" layoutY="2.0" mnemonicParsing="false" onAction="#AddStuAction" prefHeight="23.0" prefWidth="76.0" style="-fx-background-color: transparent;" text="+添加学生" textFill="#8a78ff" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="BackBt" layoutX="14.0" layoutY="3.0" mnemonicParsing="false" onAction="#BackBtAction" prefHeight="23.0" prefWidth="76.0" style="-fx-background-color: transparent;" text="&lt;&lt;返回" textFill="#8a78ff">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="InnerPaneStuScore" prefHeight="697.0" prefWidth="817.0" visible="false">
+                     <children>
+                        <ScrollPane layoutY="77.0" prefHeight="621.0" prefWidth="817.0">
+                           <content>
+                              <VBox fx:id="InScoreScrollPan" prefHeight="609.0" prefWidth="817.0" />
+                           </content>
+                        </ScrollPane>
+                        <AnchorPane prefHeight="77.0" prefWidth="817.0" style="-fx-background-color: #F8F8FF; -fx-border-color: gray;">
+                           <children>
+                              <TextField fx:id="IdInput_Tx" layoutX="50.0" layoutY="26.0" prefHeight="26.0" prefWidth="114.0" promptText="INPUT ID" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: GRAY; -fx-background-color: white;" />
+                              <TextField fx:id="NameInput_Tx" layoutX="216.0" layoutY="26.0" prefHeight="26.0" prefWidth="114.0" promptText="INPUT NAME" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: GRAY; -fx-background-color: white;" />
+                              <TextField fx:id="CourseInput_Tx" layoutX="379.0" layoutY="26.0" prefHeight="26.0" prefWidth="114.0" promptText="INPUT COURSE" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: GRAY; -fx-background-color: white;" />
+                              <Button layoutX="590.0" layoutY="27.0" mnemonicParsing="false" onAction="#ScoreSearchAction" prefHeight="23.0" prefWidth="76.0" style="-fx-background-radius: 0; -fx-border-color: gray; -fx-background-color: #F8F8FF;" text="查询" />
+                              <Button layoutX="678.0" layoutY="27.0" mnemonicParsing="false" onAction="#ScoreAddAction" prefHeight="23.0" prefWidth="76.0" style="-fx-background-radius: 0; -fx-border-color: gray; -fx-background-color: #F8F8FF;" text="添加" />
+                              <Label layoutX="22.0" layoutY="6.0" text="学号:" />
+                              <Label layoutX="188.0" layoutY="6.0" text="姓名:" />
+                              <Label layoutX="351.0" layoutY="6.0" text="课程:" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="InnerPaneCourse" prefHeight="697.0" prefWidth="817.0" visible="false">
+                     <children>
+                        <AnchorPane prefHeight="77.0" prefWidth="817.0" style="-fx-background-color: #F8F8FF; -fx-border-color: gray;">
+                           <children>
+                              <TextField fx:id="CourseId_Tx" layoutX="72.0" layoutY="26.0" prefHeight="26.0" prefWidth="163.0" promptText="INPUT ID" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: GRAY; -fx-background-color: white;" />
+                              <Button layoutX="476.0" layoutY="26.0" mnemonicParsing="false" onAction="#CourseSearchAction" prefHeight="23.0" prefWidth="76.0" style="-fx-background-radius: 0; -fx-border-color: gray; -fx-background-color: #F8F8FF;" text="查询" />
+                              <Button layoutX="575.0" layoutY="26.0" mnemonicParsing="false" onAction="#CourseAddAction" prefHeight="23.0" prefWidth="76.0" style="-fx-background-radius: 0; -fx-border-color: gray; -fx-background-color: #F8F8FF;" text="添加" />
+                              <Label layoutX="23.0" layoutY="31.0" text="课程号:" />
+                              <TextField fx:id="CourseName_Tx" layoutX="295.0" layoutY="26.0" prefHeight="26.0" prefWidth="163.0" promptText="INPUT ID" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: GRAY; -fx-background-color: white;" />
+                              <Label layoutX="248.0" layoutY="31.0" text="课程名:" />
+                           </children>
+                        </AnchorPane>
+                        <ScrollPane layoutY="77.0" prefHeight="621.0" prefWidth="817.0">
+                           <content>
+                              <VBox fx:id="InCourseScrollPane" prefHeight="621.0" prefWidth="819.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="InnerPaneBj" prefHeight="697.0" prefWidth="817.0" visible="false">
+                     <children>
+                        <AnchorPane prefHeight="77.0" prefWidth="817.0" style="-fx-background-color: #F8F8FF; -fx-border-color: gray;">
+                           <children>
+                              <TextField fx:id="Stuid" layoutX="83.0" layoutY="22.0" prefHeight="26.0" prefWidth="163.0" promptText="INPUT ID" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: GRAY; -fx-background-color: white;" />
+                              <Button layoutX="487.0" layoutY="22.0" mnemonicParsing="false" onAction="#StuSearchAction" prefHeight="23.0" prefWidth="76.0" style="-fx-background-radius: 0; -fx-border-color: gray; -fx-background-color: #F8F8FF;" text="查询" />
+                              <Label layoutX="34.0" layoutY="27.0" text="学号:" />
+                              <TextField fx:id="Classid" layoutX="306.0" layoutY="22.0" prefHeight="26.0" prefWidth="163.0" promptText="INPUT ID" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: GRAY; -fx-background-color: white;" />
+                              <Label layoutX="259.0" layoutY="27.0" text="班级:" />
+                           </children></AnchorPane>
+                        <ScrollPane layoutY="77.0" prefHeight="621.0" prefWidth="817.0">
+                           <content>
+                              <VBox fx:id="InScrollAllstu" prefHeight="619.0" prefWidth="817.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+      <AnchorPane fx:id="MenuPane" prefHeight="700.0" prefWidth="42.0" style="-fx-background-color: #BBFFFF; -fx-border-color: #2F4F4F; -fx-border-width: 1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="ImageVV" fitHeight="30.0" fitWidth="30.0" layoutX="6.0" layoutY="656.0" onMouseClicked="#ImageClick" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="ImageVV1" fitHeight="30.0" fitWidth="30.0" layoutX="6.0" layoutY="625.0" onMouseClicked="#ImageClick1" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="60.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="ImageVV2" fitHeight="30.0" fitWidth="30.0" layoutX="6.0" layoutY="583.0" onMouseClicked="#ImageClick2" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="105.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow height="18.29" radius="6.4025" spread="0.04" width="9.32" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

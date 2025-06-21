@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="805.0" style="-fx-border-color: gray; -fx-border-width: 0 0 1 0; -fx-background-color: #FFFAFA;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.myprj.StuScoreCon">
+   <children>
+      <Label fx:id="StuIdLB" layoutX="14.0" layoutY="18.0" prefHeight="15.0" prefWidth="137.0" text="学号:" />
+      <Label fx:id="NameLB" layoutX="151.0" layoutY="18.0" prefHeight="15.0" prefWidth="137.0" text="姓名:" />
+      <Label fx:id="CourseLB" layoutX="288.0" layoutY="17.0" prefHeight="15.0" prefWidth="137.0" text="课程:" />
+      <Label fx:id="ScoreLB" layoutX="425.0" layoutY="17.0" prefHeight="15.0" prefWidth="181.0" text="分数:" />
+      <Button fx:id="StuScoreDelBt" layoutX="702.0" layoutY="14.0" mnemonicParsing="false" onAction="#StuDelAction" style="-fx-background-color: transparent;" text="删除" textFill="#b081fc" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Line endX="31.33331298828125" endY="29.0" layoutX="606.0" layoutY="18.0" startX="31.33331298828125" startY="-17.999990463256836" stroke="#c9dbf2" />
+   </children>
+</AnchorPane>

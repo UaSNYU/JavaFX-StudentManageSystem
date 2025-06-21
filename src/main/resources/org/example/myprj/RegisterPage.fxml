@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="archor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="421.0" style="-fx-background-color: #0d4142; -fx-border-image-width: 1; -fx-border-color: GRAY; -fx-border-radius: 3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.myprj.RegisterController">
+   <children>
+      <Button fx:id="LoginButton" layoutX="127.0" layoutY="320.0" mnemonicParsing="false" onAction="#RegisterAction" prefHeight="35.0" prefWidth="189.0" style="-fx-background-color: #4169E1; -fx-background-radius: 12;" text="Register" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="78.0" layoutY="101.0" style="-fx-background-color: white; -fx-region-background: null;" text="Register a new Account" textAlignment="CENTER">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="185.0" prefHeight="47.0" prefWidth="106.0" text="UserId:">
+         <font>
+            <Font name="Corbel Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="217.0" prefHeight="47.0" prefWidth="106.0" text="Password:">
+         <font>
+            <Font name="Corbel Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="IdInput" layoutX="127.0" layoutY="196.0" onAction="#IdScanner" prefHeight="23.0" prefWidth="189.0" promptText="INPUT ID" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: GRAY; -fx-background-color: #5F9EA0;" />
+      <PasswordField fx:id="PasswordInput" layoutX="127.0" layoutY="228.0" onAction="#PasswordScanner" prefHeight="23.0" prefWidth="189.0" promptText="INPUT PASSWORD" style="-fx-background-color: #5F9EA0; -fx-border-color: GRAY; -fx-background-radius: 15; -fx-border-radius: 15;" />
+      <ToggleButton fx:id="ToggleStyle" layoutX="375.0" layoutY="435.0" mnemonicParsing="false" onAction="#ToggleAction" prefHeight="23.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ToggleButton>
+      <PasswordField fx:id="PasswordInput1" layoutX="127.0" layoutY="260.0" onAction="#ConfirmPasswordScanner" prefHeight="23.0" prefWidth="189.0" promptText="INPUT PASSWORD" style="-fx-background-color: #5F9EA0; -fx-border-color: GRAY; -fx-background-radius: 15; -fx-border-radius: 15;" />
+      <Label layoutX="29.0" layoutY="248.0" prefHeight="47.0" prefWidth="106.0" text="Confirm:">
+         <font>
+            <Font name="Corbel Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="LoginButton1" layoutX="127.0" layoutY="372.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="35.0" prefWidth="189.0" style="-fx-background-color: #4169E1; -fx-background-radius: 12;" text="Go Back→" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="MessageLabel" layoutX="137.0" layoutY="295.0" prefHeight="22.0" prefWidth="170.0" text="Password Not Match" textFill="RED" visible="false">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="UserIdRegistered" layoutX="115.0" layoutY="295.0" text="UserId has been registered" textFill="RED" visible="false">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="InputNull" layoutX="172.0" layoutY="294.0" text="Input is Null" textFill="RED" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="ResSuc" layoutX="137.0" layoutY="294.0" text="Register Successfully" textFill="#22ff00c2">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

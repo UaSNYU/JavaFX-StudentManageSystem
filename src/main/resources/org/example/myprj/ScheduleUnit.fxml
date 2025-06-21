@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="823.0" style="-fx-background-color: #F8F8FF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.myprj.SchedultCon">
+   <children>
+      <GridPane fx:id="gridpane" gridLinesVisible="true" layoutX="51.0" layoutY="38.0" prefHeight="362.0" prefWidth="754.0" style="-fx-border-color: gray;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label layoutX="102.0" layoutY="14.0" text="星期一">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="257.0" layoutY="14.0" text="星期二">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="402.0" layoutY="14.0" text="星期三">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="552.0" layoutY="14.0" text="星期四">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="709.0" layoutY="14.0" text="星期五">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="69.0" prefHeight="22.0" prefWidth="34.0" text="1-2">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="137.0" prefHeight="22.0" prefWidth="34.0" text="3-4">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="208.0" prefHeight="22.0" prefWidth="34.0" text="5-6">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="280.0" prefHeight="22.0" prefWidth="34.0" text="7-8">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="349.0" prefHeight="22.0" prefWidth="40.0" text="9-10">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
